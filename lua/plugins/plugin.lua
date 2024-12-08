@@ -1,24 +1,25 @@
 return {
   -- add gruvbox
   -- { "ellisonleao/gruvbox.nvim" },
+  { "catppuccin/nvim",    name = "catppuccin", priority = 1000 },
 
   -- Configure LazyVim to load gruvbox
-  --{
-  --"LazyVim/LazyVim",
-  --opts = {
-  --colorscheme = "gruvbox",
-  --},
-  --},
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "habamax",
+    },
+  },
 
   -- change trouble config
   {
     "folke/trouble.nvim",
     -- opts will be merged with the parent spec
-    opts = { use_diagnostic_signs = true },
+    opts = { use_diagnostic_signs = false },
   },
 
   -- disable trouble
-  { "folke/trouble.nvim",                             enabled = false },
+  { "folke/trouble.nvim", enabled = false },
 
   -- override nvim-cmp and add cmp-emoji
   {
@@ -124,7 +125,7 @@ return {
         "go",
         "typescript",
         "vim",
-        "yaml",
+        "yaml"
       },
     },
   },
@@ -178,7 +179,8 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "gopls"
+        "gopls",
+        "clangd"
       },
     },
   },
